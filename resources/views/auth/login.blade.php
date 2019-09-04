@@ -6,18 +6,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iofrm</title>
+    <title>codo</title>
 
 </head>
 <body>
 <div class="form-body">
-    <div class="website-logo">
-        <a href="index.html">
-            <div class="logo">
-                <img class="logo-size" src="{{ asset('images/auth/logo-light.svg') }}" alt="">
-            </div>
-        </a>
-    </div>
+    
     <div class="row">
         <div class="img-holder">
             <div class="bg"></div>
@@ -31,18 +25,40 @@
                     <h3>Get more things done with Loggin platform.</h3>
                     <p>Access to the most powerfull tool in the entire design and web industry.</p>
                     <div class="page-links">
-                        <a href="login2.html" class="active">Login</a><a href="register2.html">Register</a>
+                        <a href="{{ url('/login')}}" class="active">Login</a>
+                        <a href="{{ url('/register')}}">Register</a>
                     </div>
-                    <form>
-                        <input class="form-control" type="text" name="username" placeholder="E-mail Address" required>
-                        <input class="form-control" type="password" name="password" placeholder="Password" required>
-                        <input type="checkbox" id="chk1"><label for="chk1">Remmeber me</label>
+                    <form method="post" action="{{ route('login') }}">
+                      
+                       @csrf
+                        <input id="email" class="form-control @error('email') is-invalid @enderror" type="email" name="email" placeholder="E-mail Address" value="{{ old('email') }}" required autocomplete="email">
+                        
+                        @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                        @enderror
+                        
+                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password" required autocomplete="current-password" >
+
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                        
+                        
+                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}><label class="form-check-label" for="remember">Remeber me</label>
+                        
                         <div class="form-button">
-                            <button id="submit" type="submit" class="ibtn">Login</button> <a href="forget2.html">Forget password?</a>
+                            <button id="submit" type="submit" class="ibtn">Login</button> <a href="#">Forget password?</a>
                         </div>
+                        
+                                
                     </form>
                     <div class="other-links">
                         <span>Or login with</span><a href="#">Facebook</a><a href="#">Google</a><a href="#">Linkedin</a>
+                        
                     </div>
                 </div>
             </div>
