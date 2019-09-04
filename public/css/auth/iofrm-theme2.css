@@ -31,7 +31,7 @@
 }
 
 .website-logo .logo {
-    background-image: url("../images/logo-dark.svg");
+    background-image: url("/images/auth/logo-light.png");
 }
 
 .website-logo .logo img {
@@ -43,7 +43,7 @@
 }
 
 .website-logo-inside .logo {
-    background-image: url("../images/logo-dark.svg");
+    background-image: url("/images/auth/logo-light.png");
 }
 
 .website-logo-inside .logo img {
@@ -66,8 +66,8 @@
 }
 
 .img-holder .bg {
-    opacity: 1;
-    background-image: url("../images/img2.jpg");
+    opacity: 0.9;
+    background-image: url("/images/auth/img2.jpg");
 }
 
 .form-holder {
@@ -92,6 +92,7 @@
 
 .form-content {
     background-color: #23394A;
+    
 }
 
 .form-content .form-group {

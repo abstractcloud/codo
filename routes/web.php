@@ -14,3 +14,4 @@
 Auth::routes();
 
 Route::get('/', 'DefaultController@index')->name('default');
+
