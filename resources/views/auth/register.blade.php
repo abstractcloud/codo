@@ -1,15 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.auth')
 
-    @section('content')
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>codo</title>
-
-</head>
-<body>
+@section('content')
 <div class="form-body">
     
     <div class="row">
@@ -77,8 +68,4 @@
         </div>
     </div>
 </div>
-
-</body>
-</html>
-
 @endsection

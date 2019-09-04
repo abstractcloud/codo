@@ -11,7 +11,11 @@ io.on('connection', function(socket){
   console.log('a user connected');
     
     socket.on('message', function (msg) {
-        console.log(msg);
+        var date = new Date();
+        var currentDate = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+        
+        msg.datetime = currentDate;
+        io.emit('server_msg', msg);
     })
 });
 
