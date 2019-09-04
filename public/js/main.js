@@ -6,4 +6,5 @@ $(window).on("load", function() {
        $('.form-items','.form-content').addClass('hide-it');
        $('.form-sent','.form-content').addClass('show-it');
     })
+    
 });

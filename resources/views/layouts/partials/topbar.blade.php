@@ -3,10 +3,10 @@
     <div class="topbar-left">
         <a href="index.html" class="logo">
                     <span>
-                        <img src="images/main/logo-light.png" alt="" height="24">
+                        <img src="{{ url('images/main/logo-light.png') }}" alt="" height="24">
                     </span>
 
-            <i><img src="images/main/logo-sm.png" alt="" height="24"></i>
+            <i><img src="{{ url('images/main/logo-sm.png') }}" alt="" height="24"></i>
         </a>
     </div>
 
@@ -96,7 +96,7 @@
             <li class="dropdown notification-list list-inline-item">
                 <div class="dropdown notification-list nav-pro-img">
                     <a class="dropdown-toggle nav-link arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                        <img src="images/main/user-4.jpg" alt="user" class="rounded-circle">
+                        <img src="{{ url('images/main/user-4.jpg') }}" alt="user" class="rounded-circle">
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right profile-dropdown">

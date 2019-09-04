@@ -26,6 +26,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/metismenu.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/icons.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/channel.css') }}">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -35,8 +36,24 @@
 
 </head>
 <body>
+    <!-- Begin page -->
+    <div id="wrapper">
 
-@yield('content')
+        @include('layouts.partials.topbar')
+
+        @include('layouts.partials.sidebar')
+
+        <!-- ================== MAIN CONTENT ==================== -->
+
+        <div class="content-page">
+        @yield('content')
+        
+        @include('layouts.partials.footer')
+        </div>
+
+        <!-- ================ MAIN CONTENT END ================== -->
+        
+    </div><!-- END wrapper -->
 
 <!-- jQuery  -->
 <script src="{{ asset('js/jquery.min.js') }}"></script>
