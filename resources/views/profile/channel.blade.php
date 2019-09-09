@@ -20,7 +20,11 @@
                     <div class="channel__message-wrap">
                         <textarea id="msg" class="channel__message-write"></textarea>
                         
-                        <button data-user="{{ Auth::user()->name }}" class="btn btn-info btn-custom" id="sendmsg">SEND</button>
+                        <button 
+                            data-user="{{ Auth::user()->name }}" 
+                            data-uid="{{ Auth::user()->id }}" 
+                            data-channel="{{ $channel }}" 
+                            class="btn btn-info btn-custom" id="sendmsg">SEND</button>
                     </div>
                 </div>
            </div>
@@ -30,5 +34,12 @@
     </div>
 </div>
 <!-- End content -->
+@endsection
+
+
+
+
+@section('scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.js"></script>
 <script src="{{ asset('js/channel.js') }}"></script>
 @endsection

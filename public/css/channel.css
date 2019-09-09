@@ -1,5 +1,19 @@
+::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: #555; 
+    border-radius: 5px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #555;  
+}
+
 .messages-list {
-    border-left: 2px solid #333;
+    border-left: 2px solid #444;
 }
 
 .channel-wrp {
@@ -46,9 +60,11 @@
     width: 100%;
     position: absolute;
     top: 70px;
-    bottom: 70px;
+    bottom: 100px;
+    height: 336px;
     left: 0;
     overflow: auto;
+    transition: height 1s;
 }
 
 .msg-sender {

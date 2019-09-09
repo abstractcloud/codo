@@ -88,6 +88,8 @@ class ProfileController extends Controller
     
     public function channel($channel)
     {
-        return view('profile.channel');
+        return view('profile.channel', [
+            'channel' => $channel
+        ]);
     }
 }
