@@ -17,7 +17,6 @@ class CreateProjectsTable extends Migration
             $table->increments('id');
             $table->string('project_name', 45);
             $table->string('project_description', 150);
-            $table->integer('teams_id')->unsigned();
             $table->timestamps();
         });
     }

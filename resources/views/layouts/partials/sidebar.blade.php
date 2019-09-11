@@ -13,24 +13,28 @@
                 </li>
 
                 <li>
-                    <a href="calendar.html" class="waves-effect">
-                        <i class="ti-calendar"></i>
-                        <span>My Projects</span>
-                    </a>
-                </li>
-
-                <li>
                     <a href="javascript:void(0);" class="waves-effect">
-                        <i class="ti-email"></i>
-                        <span> Messages <span class="float-right menu-arrow">
-                                        <i class="mdi mdi-chevron-right"></i></span>
-                                    </span>
+                        <i class="ti-package"></i>
+                        <span> My Projects <span class="float-right menu-arrow">
+                                <i class="mdi mdi-chevron-right"></i></span>
+                        </span>
                     </a>
 
                     <ul class="submenu">
-                        <li><a href="email-inbox.html">Inbox</a></li>
-                        <li><a href="email-read.html">Email Read</a></li>
-                        <li><a href="email-compose.html">Email Compose</a></li>
+                        <li>
+                            <a href="{{ route('project.create') }}">
+                                <i class="ti-plus"></i>
+                                add project
+                            </a>
+
+                            @foreach($projects as $project)
+                                <a href="{{ route('project.show', $project->id) }}">
+                                    <i class="ti-package"></i>
+                                    {{ $project->project_name }}
+                                </a>
+                            @endforeach
+                        </li>
+                        
                     </ul>
 
                 </li>

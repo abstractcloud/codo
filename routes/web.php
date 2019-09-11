@@ -16,3 +16,4 @@ Auth::routes();
 Route::get('/', 'DefaultController@index')->name('default');
 Route::get('/profile', 'ProfileController@index')->name('profile');
 Route::get('/profile/channel/{channel}', 'ProfileController@channel')->name('channel');
+Route::resource('/profile/project', 'ProjectController');
